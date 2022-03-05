@@ -15,7 +15,7 @@ async function main() {
 
   // We get the contract to deploy
   const Mundo = await ethers.getContractFactory("Mundo");
-  const mundo = await Mundo.deploy(1000000000);
+  const mundo = await Mundo.deploy(1000000 * (10 ** 18));
 
   await mundo.deployed();
 
